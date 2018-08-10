@@ -1,5 +1,8 @@
 import React, {Fragment} from 'react';
+import VistaClima from '../VistaClima';
+import {GenerateDate, GetClima} from '../../utils/funciones'
 
+import './weather.css';
 
 
 class WeatherLogic extends React.Component{
@@ -19,18 +22,28 @@ class WeatherLogic extends React.Component{
           response.json()
             .then(function(data){
                 that.setState({
-                    pais: data.country
+                    pais: data.region,
+                    fecha: GenerateDate(),
                 });
                 console.log(data)
             })		
         });
+    
+    console.log(GetClima('Guatemala'));
+    
+    
+  
   } 
   
   render(){
+    const { pais, fecha} = this.state;
     return(
       <Fragment>
         <div>
-        Hola a todos!
+          <VistaClima
+            pais = {pais}
+            fecha = {fecha}
+            imagen = 'https://image.flaticon.com/icons/png/512/56/56062.png'/>
         </div>
       
       </Fragment>
