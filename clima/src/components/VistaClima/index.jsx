@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './vitaclima.css';
+
 const VistaClima = ({
   pais = '',
   imagen = '',

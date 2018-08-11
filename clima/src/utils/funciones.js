@@ -1,9 +1,17 @@
 export const GenerateDate = () => {
-  let meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
   let hoy = new Date();
   let dia = hoy.getDate();
-  let mes = meses[hoy.getUTCMonth()];
+  let mes = hoy.getMonth()+1;
   let ano = hoy.getFullYear();
-  return `${dia} de ${mes} de ${ano}`
+  return `${ano}- ${mes}-${dia}`
 }
 
+export const convertTemp = (kelvin) => {
+  if (kelvin < (0)) {
+		return 'below absolute zero (0 K)';
+	} else {
+		return (kelvin-273.15);
+	}
+  
+  
+}
