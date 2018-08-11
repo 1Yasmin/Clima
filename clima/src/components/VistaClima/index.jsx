@@ -15,7 +15,7 @@ const VistaClima = ({
     </h2>
     <p>Fecha: {fecha}</p>
     <img src= {imagen}  alt = {name}/>
-    <p>{clima}</p>
+    <p>Temperatura en celsius: {clima}</p>
   </div> 
 
 );

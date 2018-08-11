@@ -59,7 +59,7 @@ class WeatherLogic extends React.Component{
                 that.setState({
                   iconCode: recurso,
                   iconName: data.list[0].weather[0].description,
-                  clima: that.convertTemp(data.list[0].main.temp);
+                  clima: convertTemp(data.list[0].main.temp),
                 })
                 console.log(that.state);          
             })		
